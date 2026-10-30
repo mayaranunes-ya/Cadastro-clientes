@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de clientes</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body class="pagina-cadastro">
+    <nav class="menu-navegacao">
+        <a href="index.html">home</a>
+        <a href="cadastro.html">cadastro</a>
+        <a href="clientes.html">clientes</a>
+
+    </nav>
+
+    <main class="conteudo-principal">
+        <img src="assets/images.png" alt="logo da empresa" class="logo">
+        <form id="formulario-cadastro">
+            <input type="text" id="nome" placeholder="ex.:maria" required>
+            <input type="email" id="email" placeholder="ex.:maria@email.com" required>
+            <input type="tel" id="telefone" placeholder="ex.: 71 90000-0000" required>
+            <button type="button" onclick="funcaocadastrarcliente()">cadastrar</button>
+        </form>
+    </main>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
