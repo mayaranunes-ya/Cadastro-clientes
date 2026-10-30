@@ -1,0 +1,175 @@
+:root {
+	--verde-noite: #12392d;
+	--verde-pinho: #1d5942;
+	--verde-musgo: #327353;
+	--marfim: #f7f3e8;
+	--dourado: #c8a75e;
+	--vermelho: #bd3038;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body.pagina-principal {
+	min-height: 100vh;
+	color: var(--marfim);
+	background-color: var(--verde-noite);
+	background-image:
+		repeating-linear-gradient(135deg, transparent 0 42px, rgba(255, 255, 255, 0.018) 43px 44px),
+		linear-gradient(145deg, var(--verde-noite), var(--verde-pinho));
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+.menu-navegacao {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 38px;
+	min-height: 68px;
+	padding: 12px 20px;
+	border-top: 4px solid var(--vermelho);
+	border-bottom: 1px solid rgba(200, 167, 94, 0.55);
+	background: rgba(9, 42, 31, 0.58);
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+.menu-navegacao a {
+	padding: 10px 2px;
+	color: var(--marfim);
+	font-size: 14px;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: color 160ms ease;
+}
+
+.menu-navegacao a:hover,
+.menu-navegacao a:focus-visible {
+	color: var(--dourado);
+}
+
+.menu-navegacao a[href="clientes.html"] {
+	color: var(--dourado);
+}
+
+.conteudo-principal {
+	width: min(100% - 40px, 720px);
+	margin: 48px auto 72px;
+}
+
+.logo {
+	display: block;
+	width: 240px;
+	height: 80px;
+	margin: 0 auto 30px;
+	border-radius: 3px;
+	background: #fff;
+	object-fit: cover;
+	object-position: center;
+}
+
+.conteudo-principal h2 {
+	position: relative;
+	margin-bottom: 24px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid rgba(200, 167, 94, 0.55);
+	color: var(--marfim);
+	font-size: 28px;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.conteudo-principal h2::after {
+	position: absolute;
+	bottom: -2px;
+	left: calc(50% - 22px);
+	width: 44px;
+	height: 3px;
+	background: var(--vermelho);
+	content: "";
+}
+
+.lista-clientes {
+	display: grid;
+	gap: 12px;
+	list-style: none;
+}
+
+.lista-clientes li {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 17px 22px;
+	border-left: 4px solid var(--dourado);
+	border-radius: 3px;
+	background: var(--marfim);
+	box-shadow: 0 8px 18px rgba(5, 25, 18, 0.18);
+	color: var(--verde-noite);
+	font-family: "Trebuchet MS", sans-serif;
+	line-height: 1.8;
+	overflow-wrap: anywhere;
+}
+
+.imagem-cliente {
+	flex: 0 0 76px;
+	width: 76px;
+	height: 76px;
+	border: 2px solid var(--dourado);
+	border-radius: 3px;
+	background: #fff;
+	object-fit: cover;
+}
+
+.imagem-maria-madalena {
+	object-fit: contain;
+}
+
+.dados-cliente {
+	min-width: 0;
+}
+
+.lista-clientes li strong {
+	color: var(--vermelho);
+}
+
+@media (max-width: 520px) {
+	.menu-navegacao {
+		gap: 22px;
+		min-height: 60px;
+		padding-inline: 12px;
+	}
+
+	.menu-navegacao a {
+		font-size: 12px;
+	}
+
+	.conteudo-principal {
+		width: min(100% - 28px, 720px);
+		margin-top: 34px;
+	}
+
+	.logo {
+		width: 210px;
+		height: 70px;
+	}
+
+	.conteudo-principal h2 {
+		font-size: 24px;
+	}
+
+	.lista-clientes li {
+		gap: 12px;
+		padding: 15px 16px;
+		font-size: 14px;
+	}
+
+	.imagem-cliente {
+		flex-basis: 62px;
+		width: 62px;
+		height: 62px;
+	}
+}

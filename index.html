@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cadastro de clientes</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de clientes</title>
+  <link rel="stylesheet" href="cadastro.css">
 </head>
-<body class="pagina-principal">
-    <nav class="menu-navegacao">
-        <a href="index.html">home</a>
-        <a href="cadastro.html">cadastro</a>
-        <a href="clientes.html">clientes</a>
 
-    </nav>
+<body class="pagina-cadastro">
+  <nav class="menu-navegacao">
+    <a href="index.html">Home</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="clientes.html">Clientes</a>
+  </nav>
 
-    <main class="conteudo-principal">
+  <main class="conteudo-principal">
+    <img src="assets/images.png" alt="Logo da empresa" class="logo">
 
-        <img src="assets/images.png" alt="logo da empresa" class="logo">
-        <h1>Bem-vindo ao sistema de clientes </h1>
-        <p>
-            este é um sistema para cadastrar seus clientes.
-        </p>
-    
-    </main>
+    <form id="formulario-cadastro">
+      <input type="text" id="nome" placeholder="Ex.: Maria" required>
+      <input type="email" id="email" placeholder="Ex.: maria@email.com" required>
+      <input type="tel" id="telefone" placeholder="Ex.: 71 90000-0000" required>
+      <button type="button" onclick="funcaoCadastrarCliente()">Cadastar</button>
+    </form>
+  </main>
+
+  <script src="cadastro.js"></script>
 </body>
+
 </html>

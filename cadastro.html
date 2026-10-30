@@ -15,12 +15,29 @@
     </nav>
 
     <main class="conteudo-principal">
-        <img src="assets/images.png" alt="logo da empresa" class="logo">
+        <div class="marca-natal">
+            <img src="assets/images.png" alt="Logo da Coca-Cola" class="logo">
+            <span class="estrela-natal estrela-1" aria-hidden="true">✦</span>
+            <span class="estrela-natal estrela-2" aria-hidden="true">✧</span>
+            <span class="estrela-natal estrela-3" aria-hidden="true">✦</span>
+            <span class="estrela-natal estrela-4" aria-hidden="true">✧</span>
+        </div>
+        <p class="mensagem-natal">Feliz Natal!</p>
+        <h1>Cadastro de cliente</h1>
         <form id="formulario-cadastro">
-            <input type="text" id="nome" placeholder="ex.:maria" required>
-            <input type="email" id="email" placeholder="ex.:maria@email.com" required>
-            <input type="tel" id="telefone" placeholder="ex.: 71 90000-0000" required>
-            <button type="button" onclick="funcaocadastrarcliente()">cadastrar</button>
+            <div class="campo-formulario">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="Ex.: Maria" autocomplete="name" required>
+            </div>
+            <div class="campo-formulario">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Ex.: maria@email.com" autocomplete="email" required>
+            </div>
+            <div class="campo-formulario">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="Ex.: 71 90000-0000" autocomplete="tel" required>
+            </div>
+            <button type="button" onclick="funcaoCadastrarCliente()">cadastrar</button>
         </form>
     </main>
 
